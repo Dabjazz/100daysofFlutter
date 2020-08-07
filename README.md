@@ -1,6 +1,6 @@
 # dayone
 
-A new Flutter application.
+A new Flutter application. Just a noraml UI app. designed to get a better understanding of Ui design in flutter.
 
 ## Getting Started
 
