@@ -31,133 +31,138 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    bottom: Radius.circular(20),
-                  )),
-              padding: EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Find Your",
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 25,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Inspiration",
-                    style: TextStyle(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(20),
+                    )),
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Find Your",
+                      style: TextStyle(
                         color: Colors.black87,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromRGBO(244, 243, 243, 1),
-                      borderRadius: BorderRadius.circular(15),
+                        fontSize: 25,
+                      ),
                     ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        prefixIcon: Icon(
-                          Icons.search,
+                    SizedBox(height: 5),
+                    Text(
+                      "Inspiration",
+                      style: TextStyle(
                           color: Colors.black87,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(244, 243, 243, 1),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.black87,
+                          ),
+                          hintText: "Search you're looking for",
+                          hintStyle:
+                              TextStyle(color: Colors.grey, fontSize: 15),
                         ),
-                        hintText: "Search you're looking for",
-                        hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                ],
+                    SizedBox(
+                      height: 5,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Promo Today',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    height: 200,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        promoCard('assets/images/Kimi No Na Wa 2.png'),
-                        promoCard('assets/images/Kimi No Na Wa 18.png'),
-                        promoCard('assets/images/Kimi No Na Wa 42.png'),
-                        promoCard('assets/images/Kimi No Na Wa 51.png'),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage('assets/images/Kimi No Na Wa 42.png'),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Promo Today',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    child: Container(
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: 200,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          promoCard('assets/images/Kimi No Na Wa 2.png'),
+                          promoCard('assets/images/Kimi No Na Wa 18.png'),
+                          promoCard('assets/images/Kimi No Na Wa 42.png'),
+                          promoCard('assets/images/Kimi No Na Wa 51.png'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 130,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomRight,
-                          stops: [0.2, 0.8],
-                          colors: [
-                            Colors.black.withOpacity(0.8),
-                            Colors.black.withOpacity(0.2)
-                          ],
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image:
+                              AssetImage('assets/images/Kimi No Na Wa 42.png'),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Align(
-                          alignment: Alignment.bottomLeft,
-                          child: Text(
-                            'Best Design',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            stops: [0.2, 0.8],
+                            colors: [
+                              Colors.black.withOpacity(0.8),
+                              Colors.black.withOpacity(0.2)
+                            ],
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Text(
+                              'Best Design',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
